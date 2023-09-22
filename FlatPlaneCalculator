@@ -1,0 +1,120 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    char shape;
+    float length, length1, length2, length3, width, base, height, rad; 
+    float area_of_square, perimeter_of_square, area_of_rectangle, perimeter_of_rectangle, area_of_triangle, perimeter_of_triangle, area_of_circle, perimeter_of_circle;
+
+    cout << "Input the shape you want to calculate (s for square, r for rectangle, t for triangle, c for circle): ";
+    cin >> shape;
+    cout << "make sure the data you want to enter is in the same unit!!" << endl;
+    // SQUARE
+    if (shape == 's') {
+        char value;
+        cout << "Please input what value you are looking for (please input a for area/ p for perimeter): ";
+        cin >> value;
+
+        if (value == 'a') {
+            cout << "Please enter the length data of square: ";
+            cin >> length;
+            area_of_square = length * length;
+            cout << "Area of the square is: " << area_of_square << endl;
+        } 
+        else if (value == 'p') {
+            cout << "Please enter the length data of square: ";
+            cin >> length;
+            perimeter_of_square = 4 * length;
+            cout << "Perimeter of the square is: " << perimeter_of_square << endl;
+        } 
+        else {
+            cout << "Invalid value input." << endl;
+        }
+    } 
+    // RECTANGLE
+    else if (shape == 'r') {
+        char value;
+        cout << "Please input what value you are looking for (please input a for area/ p for perimeter): ";
+        cin >> value;
+
+        if (value == 'a') {
+            cout << "Please enter the length data of rectangle: ";
+            cin >> length;
+            cout << "Please enter the width data of rectangle: ";
+            cin >> width;
+            area_of_rectangle = length * width;
+            cout << "Area of the rectangle is: " << area_of_rectangle << endl;
+        } 
+        else if (value == 'p') {
+            cout << "Please enter the length data of rectangle: ";
+            cin >> length;
+            cout << "Please enter the width data of rectangle: ";
+            cin >> width;
+            perimeter_of_rectangle = 2 * (length + width);
+            cout << "Perimeter of the rectangle is: " << perimeter_of_rectangle << endl;
+        } 
+        else {
+            cout << "Invalid value input." << endl;
+        }
+    } 
+
+    // TRIANGLE
+    else if (shape == 't'){
+        char value;
+        cout << "Please input what value you are looking for (please input a for area/ p for perimeter): ";
+        cin >> value;
+
+        if (value == 'a') 
+        {
+            cout << "Please enter the base data of triangle: ";
+            cin >> base;
+            cout << "Please enter the height data of triangle: ";
+            cin >> height;
+            area_of_triangle = (base * height)/2;
+            cout << "Area of the triangle is: " << area_of_triangle << endl;
+        } 
+        else if (value == 'p') {
+            cout << "Please enter the length data of the front side of the triangle: ";
+            cin >> length1;
+            cout << "Please enter the length data of the sideways of the triangle: ";
+            cin >> length2;
+            cout << "Please enter the length data of the the hypotenuse of the triangle: ";
+            cin >> length3;
+            perimeter_of_triangle = length1 + length2 + length3;
+            cout << "Perimeter of the triangle is: " << perimeter_of_triangle << endl;
+        } 
+        else {
+            cout << "Invalid value input." << endl;
+        }
+    } 
+
+    //CIRCLE
+        else if (shape == 'c'){
+        char value;
+        cout << "Please input what value you are looking for (please input a for area/ p for perimeter): ";
+        cin >> value;
+
+        if (value == 'a') {
+            cout << "Please enter the radius data of circle: ";
+            cin >> rad;
+            area_of_circle = rad * rad * 22/7;
+            cout << "Area of the circle is: " << area_of_circle << endl;
+        } 
+        else if (value == 'p') {
+            cout << "Please enter the radius data of circle: ";
+            cin >> rad;
+            perimeter_of_circle = 2 * rad * 22/7;
+            cout << "Perimeter of the circle is: " << perimeter_of_circle << endl;
+        } 
+        else {
+            cout << "Invalid value input." << endl;
+        }
+    } 
+
+
+    else {
+        cout << "Invalid shape input." << endl;
+    }
+    return 0;
+}
